@@ -99,6 +99,17 @@ namespace LinkedListProblems
             prev.next = newestNode;
             return this.head;
         }
+        internal Node  RemoveFirstNode()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.next;
+            Console.WriteLine("First Node Is Deleted SuccesFully ");
+            return this.head;
+        }
+      
     }
 }
     

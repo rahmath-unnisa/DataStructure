@@ -11,7 +11,7 @@ namespace LinkedListProblem
         {
             Console.WriteLine("Linked List Problem Statements");
             bool end = true;
-            Console.WriteLine("Enter Option\n1.Add The Data \n2.Reverse The Data \n3.Insert The Data \n4.Remove First No0de \n5. Delete The Last Node \n6. End Of Program ");
+            Console.WriteLine("Enter Option\n1.Add The Data \n2.Reverse The Data \n3.Insert The Data \n4.Remove First No0de \n5. Delete The Last Node \n6.Search The Element \n7. End Of Program ");
             while (end)
             {
                 LinkedList list = new LinkedList();
@@ -53,6 +53,13 @@ namespace LinkedListProblem
                         list.Display();
                         break;
                     case 6:
+                        list.Add(56);
+                        list.Add(30);
+                        list.Add(70);
+                        list.Search(30);
+                        list.Display();
+                        break;
+                    case 7:
                         end = false;
                         Console.WriteLine("Program Is Ended.");
                         break;

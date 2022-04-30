@@ -58,19 +58,21 @@ namespace LinkedListProblems
         }
         public int Search(int value)
         {
-            Node node = this.head;
-            int count = 0;
-            while (node != null)
-            {
-
-                if (node.data == value)
+                Node node = this.head;
+                int count = 0;
+                while (node != null)
                 {
-                    return count;
+
+                    if (node.data == value)
+                    {
+                        return count;
+                    }
+                    node = node.next;
+                    count++;
                 }
-                node = node.next;
-                count++;
-            }
-            return count;
+                return count;
+                Console.WriteLine("Search Value Is: " + value);
+            
         }
 
         internal Node InsertAtParticularPosition(int position, int data)

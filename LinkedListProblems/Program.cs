@@ -13,7 +13,10 @@ namespace LinkedListProblems
             list.Add(30);
             list.Add(70);
             list.Display();
-            list.AddInReverseOrder(70);
+            //list.AddInReverseOrder(70);
+            //list.Display();
+            int num = list.Search(56);
+            list.InsertAtParticularPosition(num + 1, 30);
             list.Display();
         }
     }

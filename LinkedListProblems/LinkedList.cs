@@ -54,6 +54,50 @@ namespace LinkedListProblems
                 head = newNode;
                 head.next = temp;
             }
+            Display();
+        }
+        public int Search(int value)
+        {
+            Node node = this.head;
+            int count = 0;
+            while (node != null)
+            {
+
+                if (node.data == value)
+                {
+                    return count;
+                }
+                node = node.next;
+                count++;
+            }
+            return count;
+        }
+
+        internal Node InsertAtParticularPosition(int position, int data)
+        {
+            Node newestNode = new Node(data);
+            if (this.head == null)
+            {
+                return newestNode;
+            }
+            if (position == 0)
+            {
+                newestNode.next = this.head;
+                this.head = newestNode;
+                return this.head;
+            }
+            Node prev = null;
+            Node current = this.head;
+            int count = 0;
+            while (current != null && count < position)
+            {
+                prev = current;
+                current = current.next;
+                count++;
+            }
+            newestNode.next = prev.next;
+            prev.next = newestNode;
+            return this.head;
         }
     }
 }

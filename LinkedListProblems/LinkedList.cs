@@ -109,7 +109,26 @@ namespace LinkedListProblems
             Console.WriteLine("First Node Is Deleted SuccesFully ");
             return this.head;
         }
-      
+        public Node DeleteLastNode()
+        {
+            if (head == null)
+            {
+                return null;
+            }
+            if (head.next == null)
+            {
+                return null;
+            }
+            Node NewNode = head;
+            while (NewNode.next.next != null)
+            {
+                NewNode = NewNode.next;
+            }
+            NewNode.next = null;
+            Console.WriteLine("Last Node Is Deleted SuccesFully ");
+            return head;
+        }
+
     }
 }
     

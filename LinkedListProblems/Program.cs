@@ -13,6 +13,8 @@ namespace LinkedListProblems
             list.Add(30);
             list.Add(70);
             list.Display();
+            list.AddInReverseOrder(70);
+            list.Display();
         }
     }
 }
